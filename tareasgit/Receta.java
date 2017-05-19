@@ -4,14 +4,15 @@ import java.util.ArrayList;
 
 public class Receta {
 	private String nombre;
-	private String ingredientes;
 	private ArrayList<String> preparacion;
-	
+	private ArrayList<Ingrediente> ingredientes;
+
 	public Receta(){
 		
 	}
 	
-	public Receta(String nombre, String ingredientes, ArrayList<String> preparacion) {
+	public Receta(String nombre, ArrayList<Ingrediente> ingredientes, ArrayList<String> preparacion) {
+
 		this.nombre = nombre;
 		this.ingredientes = ingredientes;
 		this.preparacion = preparacion;
@@ -25,11 +26,11 @@ public class Receta {
 		this.nombre = nombre;
 	}
 
-	public String getIngredientes() {
+	public ArrayList<Ingrediente> getIngredientes() {
 		return ingredientes;
 	}
 
-	public void setIngredientes(String ingredientes) {
+	public void setIngredientes(ArrayList<Ingrediente> ingredientes) {
 		this.ingredientes = ingredientes;
 	}
 
