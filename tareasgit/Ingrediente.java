@@ -9,7 +9,7 @@ public class Ingrediente {
 		
 	}
 	
-	public Ingrediente(float cantidad, String nombre) {
+	public Ingrediente(float cantidad, String unidad, String nombre) {
 		this.cantidad = cantidad;
 		this.nombre = nombre;
 	}
@@ -38,8 +38,17 @@ public class Ingrediente {
 		this.unidad = unidad;
 	}
 	
+	
 	public String toString(){
 		return(cantidad + " " + unidad + " de " + nombre);
+	}
+	
+	public static void main(String[] args){
+		Ingrediente i = new Ingrediente(3,"Kg","tomates");
+		String prueba = new String();
+		prueba =i.toString();
+		System.out.print(prueba);
+		
 	}
 
 }
