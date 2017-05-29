@@ -38,6 +38,8 @@ public class Ingrediente {
 		this.unidad = unidad;
 	}
 	
-	
+	public String toString(){
+		return(cantidad + " " + unidad + " de " + nombre);
+	}
 
 }
