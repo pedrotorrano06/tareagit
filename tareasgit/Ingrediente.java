@@ -1,23 +1,24 @@
 package tareasgit;
 
 public class Ingrediente {
-	private String cantidad;
+	private float cantidad;
+	private String unidad;
 	private String nombre;
 	
 	public Ingrediente(){
 		
 	}
 	
-	public Ingrediente(String cantidad, String nombre) {
+	public Ingrediente(float cantidad, String nombre) {
 		this.cantidad = cantidad;
 		this.nombre = nombre;
 	}
 
-	public String getCantidad() {
+	public float getCantidad() {
 		return cantidad;
 	}
 
-	public void setCantidad(String cantidad) {
+	public void setCantidad(float cantidad) {
 		this.cantidad = cantidad;
 	}
 
