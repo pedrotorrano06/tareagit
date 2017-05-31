@@ -6,6 +6,8 @@ public class Receta {
 	private String nombre;
 	private ArrayList<String> preparacion;
 	private ArrayList<Ingrediente> ingredientes;
+	private int personas = 4;
+	String autor;
 
 	public Receta(){
 		
@@ -42,6 +44,24 @@ public class Receta {
 		this.preparacion = preparacion;
 	}
 	
+	
+	
+	public int getPersonas() {
+		return personas;
+	}
+
+	public void setPersonas(int personas) {
+		this.personas = personas;
+	}
+
+	public String getAutor() {
+		return autor;
+	}
+
+	public void setAutor(String autor) {
+		this.autor = autor;
+	}
+
 	public void addIngrediente(Ingrediente ingrediente){
 		this.ingredientes.add(ingrediente);
 		
@@ -80,8 +100,8 @@ public class Receta {
 		r.addIngrediente(i1);
 		r.addIngrediente(i2);
 		
-		/*String pasos = r.pasosPreparacion();
-		r.addPreparacion(pasos);*/
+		String pasos = r.pasosPreparacion();
+		r.addPreparacion(pasos);
 
 		System.out.print(r.toString());
 		
