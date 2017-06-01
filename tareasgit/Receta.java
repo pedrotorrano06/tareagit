@@ -43,9 +43,7 @@ public class Receta {
 	public void setPreparacion(ArrayList<String> preparacion) {
 		this.preparacion = preparacion;
 	}
-	
-	
-	
+			
 	public int getPersonas() {
 		return personas;
 	}
@@ -88,6 +86,16 @@ public class Receta {
 			resultado = resultado + "Paso" + (i+1) + " : " + preparacion.get(i) + "\n";
 		return("Preparación :" + resultado);
 	}
+	
+	public Receta recetaPara(int personas){
+		Ingrediente i = new Ingrediente();
+		Receta r = new Receta();
+		float cantidadPersona = i.getCantidad()/r.getPersonas();
+		float ingredientesPersonas = cantidadPersona*personas;
+		i.setCantidad(ingredientesPersonas);
+		return(r);
+	}	
+	
 	
 	public static void main(String[] args){
 		Ingrediente i1 = new Ingrediente(2, "kg", "patatas");
